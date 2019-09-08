@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2019_09_08_121050) do
   enable_extension "plpgsql"
 
   create_table "pages", force: :cascade do |t|
+    t.string "name", default: "", null: false
+    t.string "description", default: "", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

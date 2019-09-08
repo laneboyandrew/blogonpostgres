@@ -1,0 +1,21 @@
+<h1> Pages </h1>
+<table class = "table">
+	<thead> 
+		<tr>
+			<th> Название: </th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @pages.each do |page| %>
+		<tr>
+			<td>
+				<%=page.name %>
+			</td>
+
+			<td> 
+				<%= link_to 'Edit', edit_page_path(page)%> 
+		<% end %> 
+	</tbody>
+
+</table> 
